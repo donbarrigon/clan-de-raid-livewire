@@ -7,6 +7,24 @@
                 'route' => route('dashboard'),
                 'current' => request()->routeIs('dashboard'),
             ],
+            [
+                'name' => 'Countries',
+                'icon' => 'globe-americas',
+                'route' => route('dashboard.countries.index'),
+                'current' => request()->routeIs('dashboard.countries.*'),
+            ],
+            [
+                'name' => 'States',
+                'icon' => 'map',
+                'route' => route('dashboard.countries.index'),
+                'current' => request()->routeIs('dashboard.countries.*'),
+            ],
+            [
+                'name' => 'Cities',
+                'icon' => 'map-pin',
+                'route' => route('dashboard.countries.index'),
+                'current' => request()->routeIs('dashboard.countries.*'),
+            ],
         ],
     ];
 @endphp
@@ -37,7 +55,7 @@
             <flux:spacer />
 
             <flux:navlist variant="outline">
-                <flux:navlist.item icon="folder-git-2" href="https://github.com/laravel/livewire-starter-kit" target="_blank">
+                <flux:navlist.item icon="folder-git-2" href="https://github.com/donbarrigon/clan-de-raid-livewire" target="_blank">
                 {{ __('Repository') }}
                 </flux:navlist.item>
             </flux:navlist>
