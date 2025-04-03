@@ -1,0 +1,91 @@
+:root {
+    --color-primary: #6CA9D4; /* Azul bandera Argentina */
+    --color-secondary: #F7C242; /* Amarillo dorado bandera Argentina */
+    --color-primary-hover: #5A9CC9; /* Azul más oscuro para hover */
+}
+
+/* estilos de botones */
+.btn {
+    @apply font-bold py-2 px-4 rounded no-underline;
+}
+.btn-primary {
+    @apply text-white;
+    background-color: var(--color-primary);
+}
+.btn-primary:hover {
+    background-color: var(--color-primary-hover);
+}
+.btn-secondary {
+    @apply text-[var(--color-primary)] border border-[var(--color-primary)] bg-transparent;
+}
+.btn-secondary:hover {
+    @apply text-white bg-[var(--color-primary)];
+}
+.btn-warning {
+    @apply text-white bg-yellow-500 hover:bg-yellow-600;
+}
+.btn-danger {
+    @apply text-white bg-red-500 hover:bg-red-600;
+}
+.btn-success {
+    @apply text-white bg-green-500 hover:bg-green-600;
+}
+.btn-info {
+    @apply text-white bg-blue-500 hover:bg-blue-600;
+}
+
+/* estilos de las card */
+.card {
+    @apply relative shadow-lg rounded-lg overflow-hidden bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 transition-colors;
+}
+.card-header {
+    @apply px-6 py-4 font-bold text-neutral-900 dark:text-white bg-neutral-100 dark:bg-neutral-700 border-b border-neutral-200 dark:border-neutral-600;
+}
+.card-body {
+    @apply p-6 text-neutral-700 dark:text-neutral-300;
+}
+.card-footer {
+    @apply px-6 py-4 bg-neutral-100 dark:bg-neutral-700 border-t border-neutral-200 dark:border-neutral-600 text-right;
+}
+
+/* estilos de la tabla */
+.data-table {
+    @apply relative overflow-x-auto sm:rounded-lg shadow-lg border-1;
+    border-color: var(--color-primary);
+    &:where(.dark, .dark *) {
+        border-color: var(--color-neutral-700);
+    }
+}
+.data-table table {
+    @apply w-full text-sm text-left rtl:text-right text-neutral-500 dark:text-neutral-400;
+}
+.data-table thead {
+    @apply text-xs uppercase text-white;
+    background-color: var(--color-primary);
+    &:where(.dark, .dark *) {
+        background-color: var(--color-neutral-700);
+    }
+}
+.data-table th {
+    @apply px-6 py-3;
+}
+.data-table tbody tr {
+    @apply bg-white border-b dark:bg-neutral-800 border-neutral-200 hover:bg-sky-100 dark:hover:bg-neutral-600;
+    border-color: var(--color-secondary);
+    &:where(.dark, .dark *) {
+        border-color: var(--color-neutral-700);
+    }
+}
+.data-table td {
+    @apply px-6 py-4 font-medium text-neutral-900 whitespace-nowrap dark:text-white;
+}
+.data-table-actions-column {
+    @apply sticky right-0 z-10 bg-white dark:bg-neutral-800 hover:bg-sky-100 dark:hover:bg-neutral-600;
+}
+.data-table-actions-header{
+    @apply sticky right-0 z-10 text-xs uppercase text-white;
+    background-color: var(--color-primary);
+    &:where(.dark, .dark *) {
+        background-color: var(--color-neutral-700);
+    }
+}
